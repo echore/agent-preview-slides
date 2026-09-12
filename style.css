@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Work+Sans:wght@400;500&display=swap');
+
+:root {
+  --paper: #F2EEDF;
+  --paper-2: #ECE6D2;
+  --ink: #2A241B;
+  --ink-soft: #5C5345;
+  --pink: #E1A4C2;
+  --lemon: #D6DD63;
+  --blush: #E8C9B6;
+  --sage: #B7C7A8;
+  --lilac: #C9BEDC;
+  --card-fill: rgba(255, 255, 255, 0.55);
+  --rule-soft: rgba(42, 36, 27, 0.18);
+  --radius: 28px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  background: #1a1a1a;
+  font-family: "Work Sans", sans-serif;
+  color: var(--ink);
+}
+
+.slide {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: var(--paper);
+  overflow: hidden;
+}
+
+.slide.is-active {
+  display: block;
+}
+
+.eyebrow {
+  position: absolute;
+  top: 5.5%;
+  left: 4.2%;
+  font: 400 1.1vw "Work Sans", sans-serif;
+}
+
+.pagedot {
+  position: absolute;
+  top: 5.5%;
+  right: 4.2%;
+  font: italic 400 1vw "Cormorant Garamond", serif;
+  color: var(--ink-soft);
+}
+
+.footer {
+  position: absolute;
+  left: 4.2%;
+  right: 4.2%;
+  bottom: 4.6%;
+  display: flex;
+  justify-content: space-between;
+  font: italic 400 1vw "Cormorant Garamond", serif;
+  color: var(--ink-soft);
+}
+
+.display {
+  font: 500 9.8vw/0.95 "Cormorant Garamond", serif;
+  letter-spacing: -0.015em;
+  margin: 0;
+}
+
+.headline {
+  font: 500 5vw/0.98 "Cormorant Garamond", serif;
+  margin: 0;
+}
+
+.subhead {
+  font: 500 2.3vw/1.05 "Cormorant Garamond", serif;
+  margin: 0;
+}
+
+.kicker {
+  font: italic 400 1.4vw/1.2 "Cormorant Garamond", serif;
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+.body {
+  font: 400 1.35vw/1.5 "Work Sans", sans-serif;
+  margin: 0;
+}
+
+.body-sm {
+  font: 400 1.25vw/1.5 "Work Sans", sans-serif;
+  margin: 0;
+}
+
+.card {
+  background: var(--card-fill);
+  border-radius: var(--radius);
+  padding: 2.5vw 2.7vw;
+}
+
+.card--pink {
+  background: var(--pink);
+}
+
+.card--lemon {
+  background: var(--lemon);
+}
+
+.card--blush {
+  background: var(--blush);
+}
+
+.card--sage {
+  background: var(--sage);
+}
+
+.card--lilac {
+  background: var(--lilac);
+}
+
+.chip {
+  border-radius: 999px;
+  padding: 0.5vw 1.3vw;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.brick {
+  border-radius: 5px 5px 12px 12px;
+  padding: 1vw;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.brick-stud {
+  width: 0.6vw;
+  height: 0.6vw;
+  border-radius: 50%;
+}
+
+/* Layout mode: hero — one headline plus one centered visual */
+.layout-hero {
+  position: absolute;
+  top: 15%;
+  bottom: 13%;
+  left: 4.2%;
+  right: 4.2%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2vw;
+  text-align: center;
+}
+
+/* Layout mode: content — headline plus left-aligned text or bullets */
+.layout-content {
+  position: absolute;
+  top: 18%;
+  left: 4.2%;
+  right: 4.2%;
+  bottom: 15%;
+}
+
+.layout-content .headline {
+  font-size: 3.3vw;
+  margin-bottom: 1.7vw;
+}
+
+.layout-content ul {
+  font: 400 1.45vw/1.6 "Work Sans", sans-serif;
+  padding-left: 1.5vw;
+  margin: 0;
+}
+
+.layout-content li {
+  margin-bottom: 0.8vw;
+}
+
+/* Small visual components used inside hero layouts */
+.chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.8vw;
+}
+
+.chip--blank {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1.5px dashed var(--rule-soft);
+}
+
+.brick-row {
+  display: flex;
+}
+
+.brick-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.brick-studs {
+  display: flex;
+  gap: 0.4vw;
+  margin-bottom: -0.4vw;
+}
+
+.bar-row {
+  display: flex;
+  align-items: center;
+  gap: 0.8vw;
+  margin-bottom: 0.8vw;
+}
+
+.bar-label {
+  width: 3.5vw;
+  font-size: 1vw;
+  text-align: right;
+}
+
+.bar-track {
+  flex: 1;
+  height: 1.1vw;
+  background: rgba(42, 36, 27, 0.08);
+  border-radius: 999px;
+  overflow: hidden;
+  text-align: left;
+}
+
+.bar-fill {
+  height: 100%;
+}
+
+.timeline-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6vw;
+}
+
+.window-box {
+  border: 1.5px dashed var(--rule-soft);
+  border-radius: 1.1vw;
+  display: flex;
+  gap: 0.5vw;
+  padding: 0.4vw;
+}
+
+.faded {
+  opacity: 0.5;
+  background: rgba(42, 36, 27, 0.06);
+  color: var(--ink-soft);
+}
