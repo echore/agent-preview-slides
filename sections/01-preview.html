@@ -10,14 +10,18 @@
   .title-chips { display: flex; gap: 1vw; margin-top: 0.6vw; }
   .title-chips .chip { font: 500 1.35vw "Work Sans", sans-serif; padding: 0.55vw 1.5vw; }
 
+  /* Fixed two-band composition: title in the upper fifth, body centred on the page (slides 2 and 8) */
+  .band-title { position: absolute; top: 20%; left: 4.2%; right: 4.2%; text-align: center; }
+  .band-body { position: absolute; top: 54%; left: 4.2%; right: 4.2%; transform: translateY(-50%); display: flex; justify-content: center; }
+
   /* Roadmap row (used on slide 2 and slide 8) */
-  .rm-row { display: flex; align-items: flex-start; justify-content: center; gap: 1vw; width: 92vw; }
-  .rm-step { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 0.9vw; text-align: center; }
-  .rm-tag { font: 500 1.45vw "Work Sans", sans-serif; padding: 0.6vw 1.5vw; }
-  .rm-title { margin: 0; font: 500 1.9vw/1.15 "Cormorant Garamond", serif; }
-  .rm-line { margin: 0; font: 400 1.3vw/1.4 "Work Sans", sans-serif; color: var(--ink-soft); max-width: 15vw; }
-  .rm-arrow { font: 400 2.4vw "Cormorant Garamond", serif; color: var(--ink-soft); margin-top: 0.15vw; }
-  .rm-check { display: inline-flex; align-items: center; justify-content: center; width: 2.2vw; height: 2.2vw; border-radius: 50%; background: var(--ink); color: var(--paper); font: 500 1.3vw "Work Sans", sans-serif; }
+  .rm-row { display: flex; align-items: flex-start; justify-content: center; gap: 1.2vw; width: 92vw; }
+  .rm-step { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 1.1vw; text-align: center; }
+  .rm-tag { font: 500 1.6vw "Work Sans", sans-serif; padding: 0.7vw 1.7vw; }
+  .rm-title { margin: 0; font: 500 2.2vw/1.15 "Cormorant Garamond", serif; }
+  .rm-line { margin: 0; font: 400 1.45vw/1.45 "Work Sans", sans-serif; color: var(--ink-soft); max-width: 17vw; }
+  .rm-arrow { font: 400 2.8vw "Cormorant Garamond", serif; color: var(--ink-soft); margin-top: 0.2vw; }
+  .rm-check { display: inline-flex; align-items: center; justify-content: center; width: 2.6vw; height: 2.6vw; border-radius: 50%; background: var(--ink); color: var(--paper); font: 500 1.5vw "Work Sans", sans-serif; }
 
   /* Who-does-the-work flow (slide 3) */
   .flow-wrap { display: flex; flex-direction: column; gap: 2vw; width: 90vw; }
@@ -98,12 +102,12 @@
 <section class="slide" data-label="Roadmap">
   <div class="eyebrow" style="font-size: 1.5vw;">Module 1 &middot; Preview</div>
   <div class="pagedot"></div>
-  <div class="layout-hero" style="top: 14%; bottom: 24%; gap: 4vw;">
-    <h1 class="headline" style="font-size: 3.4vw;">Roadmap</h1>
+  <div class="band-title"><h1 class="headline" style="font-size: 3.6vw;">Roadmap</h1></div>
+  <div class="band-body">
     <div class="rm-row">
-      <div class="rm-step"><span class="chip card--pink rm-tag">WHY</span><p class="rm-title">Why this matters to&nbsp;you</p></div>
+      <div class="rm-step"><span class="chip card--pink rm-tag">WHY</span><p class="rm-title">Why&nbsp;this&nbsp;matters to&nbsp;you</p></div>
       <span class="rm-arrow">&rarr;</span>
-      <div class="rm-step"><span class="chip card--blush rm-tag">Concept A</span><p class="rm-title">What is an agent</p></div>
+      <div class="rm-step"><span class="chip card--blush rm-tag">Concept A</span><p class="rm-title">What is an&nbsp;agent</p></div>
       <span class="rm-arrow">&rarr;</span>
       <div class="rm-step"><span class="chip card--sage rm-tag">Concept B</span><p class="rm-title">How it works</p></div>
       <span class="rm-arrow">&rarr;</span>
@@ -310,8 +314,8 @@
 <section class="slide" data-label="Takeaway">
   <div class="eyebrow" style="font-size: 1.5vw;">Module 1 &middot; Preview</div>
   <div class="pagedot"></div>
-  <div class="layout-hero" style="top: 12%; bottom: 26%; gap: 4vw;">
-    <h1 class="headline" style="font-size: 3.4vw;">Takeaway</h1>
+  <div class="band-title"><h1 class="headline" style="font-size: 3.6vw;">Takeaway</h1></div>
+  <div class="band-body" style="top: 56%;">
     <div class="rm-row">
       <div class="rm-step"><span class="rm-check">&#10003;</span><span class="chip card--pink rm-tag">WHY</span><p class="rm-line">Basic chatbots mainly answer. Agents can take actions.</p></div>
       <div class="rm-step"><span class="rm-check">&#10003;</span><span class="chip card--blush rm-tag">Concept A</span><p class="rm-line">An AI that takes actions on its own to finish a task.</p></div>
