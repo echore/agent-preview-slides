@@ -8,13 +8,56 @@ const SECTION_ANCHORS = {
 };
 
 const deck = document.getElementById('deck');
+const REVEAL_ALL = new URLSearchParams(window.location.search).has('all');
 let slides = [];
 let current = 0;
 
-function goTo(index) {
+// ---- build steps -------------------------------------------------------
+// Elements with data-step="N" stay hidden until step N is reached on that slide.
+function maxStep(slide) {
+  let max = 0;
+  slide.querySelectorAll('[data-step]').forEach((el) => {
+    max = Math.max(max, Number(el.dataset.step) || 0);
+  });
+  return max;
+}
+
+function setStep(slide, n) {
+  const clamped = Math.max(0, Math.min(maxStep(slide), n));
+  slide.dataset.build = clamped;
+  slide.querySelectorAll('[data-step]').forEach((el) => {
+    el.classList.toggle('is-revealed', (Number(el.dataset.step) || 0) <= clamped);
+  });
+}
+
+function currentStep(slide) {
+  return Number(slide.dataset.build) || 0;
+}
+
+// ---- navigation --------------------------------------------------------
+function goTo(index, { revealAll = false } = {}) {
   if (!slides.length) return;
   current = Math.max(0, Math.min(slides.length - 1, index));
   slides.forEach((slide, i) => slide.classList.toggle('is-active', i === current));
+  setStep(slides[current], revealAll || REVEAL_ALL ? maxStep(slides[current]) : 0);
+}
+
+function next() {
+  const slide = slides[current];
+  if (currentStep(slide) < maxStep(slide)) {
+    setStep(slide, currentStep(slide) + 1);
+  } else if (current < slides.length - 1) {
+    goTo(current + 1);
+  }
+}
+
+function prev() {
+  const slide = slides[current];
+  if (currentStep(slide) > 0) {
+    setStep(slide, currentStep(slide) - 1);
+  } else if (current > 0) {
+    goTo(current - 1, { revealAll: true });
+  }
 }
 
 function startFromHash() {
@@ -46,8 +89,8 @@ async function loadSections() {
 }
 
 window.addEventListener('keydown', (event) => {
-  if (event.key === 'ArrowRight' || event.key === ' ') goTo(current + 1);
-  if (event.key === 'ArrowLeft') goTo(current - 1);
+  if (event.key === 'ArrowRight' || event.key === ' ' || event.key === 'ArrowDown') { event.preventDefault(); next(); }
+  if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') { event.preventDefault(); prev(); }
 });
 window.addEventListener('hashchange', startFromHash);
 

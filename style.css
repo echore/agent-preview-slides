@@ -257,3 +257,56 @@ body {
   background: rgba(42, 36, 27, 0.06);
   color: var(--ink-soft);
 }
+
+/* ---------- Motion ---------- */
+:root {
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --dur-slide: 420ms;
+  --dur-step: 320ms;
+}
+
+/* Slide change: crossfade with a small rise. Restarts each time a slide becomes active. */
+@keyframes slide-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: none; }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Animate the slide's content, not the slide itself: the paper background stays solid,
+   so no dark body shows through between slides. Chrome (eyebrow, page number) stays put. */
+.slide.is-active > *:not(.eyebrow):not(.pagedot):not(.no-rise) {
+  animation: slide-in var(--dur-slide) var(--ease-out) both;
+}
+
+/* Entry stagger: elements marked .enter rise in one after another when the slide appears. */
+.enter {
+  animation: slide-in 480ms var(--ease-out) both;
+  animation-delay: calc(var(--i, 0) * 70ms + 120ms);
+}
+
+/* Build steps: [data-step] elements stay hidden until the presenter reveals that step. */
+[data-step] {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity var(--dur-step) var(--ease-out), transform var(--dur-step) var(--ease-out);
+  transition-delay: var(--d, 0ms);
+}
+
+[data-step].is-revealed {
+  opacity: 1;
+  transform: none;
+}
+
+svg [data-step] {
+  transform-box: fill-box;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .slide.is-active > *:not(.eyebrow):not(.pagedot):not(.no-rise) { animation: fade-in 200ms ease-out both; }
+  .enter { animation-name: fade-in; animation-duration: 200ms; }
+  [data-step] { transform: none; transition: opacity 200ms ease-out; }
+}
