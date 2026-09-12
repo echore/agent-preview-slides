@@ -34,29 +34,6 @@ function currentStep(slide) {
   return Number(slide.dataset.build) || 0;
 }
 
-// ---- progress marker ---------------------------------------------------
-// A small copy of the roadmap at the top of each content slide; the current section is lit.
-const PROGRESS = [
-  { key: 'why',      label: 'WHY',       tone: 'card--pink' },
-  { key: 'a',        label: 'Concept A', tone: 'card--blush' },
-  { key: 'b',        label: 'Concept B', tone: 'card--sage' },
-  { key: 'c',        label: 'Concept C', tone: 'card--lilac' },
-  { key: 'takeaway', label: 'Takeaway',  tone: 'chip--blank' },
-];
-
-function buildProgress(currentKey) {
-  const bar = document.createElement('div');
-  bar.className = 'progress';
-  bar.setAttribute('aria-hidden', 'true');
-  PROGRESS.forEach(({ key, label, tone }) => {
-    const item = document.createElement('span');
-    item.className = `progress-item chip ${tone}${key === currentKey ? ' is-current' : ''}`;
-    item.textContent = label;
-    bar.append(item);
-  });
-  return bar;
-}
-
 // ---- navigation --------------------------------------------------------
 function goTo(index, { revealAll = false } = {}) {
   if (!slides.length) return;
@@ -107,7 +84,6 @@ async function loadSections() {
   slides.forEach((slide, i) => {
     const pagedot = slide.querySelector('.pagedot');
     if (pagedot) pagedot.textContent = `${i + 1} / ${slides.length}`;
-    if (slide.dataset.progress) slide.append(buildProgress(slide.dataset.progress));
   });
   startFromHash();
 }

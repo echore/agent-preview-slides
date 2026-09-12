@@ -278,7 +278,7 @@ body {
 
 /* Animate the slide's content, not the slide itself: the paper background stays solid,
    so no dark body shows through between slides. Chrome (eyebrow, page number) stays put. */
-.slide.is-active > *:not(.eyebrow):not(.pagedot):not(.progress):not(.no-rise) {
+.slide.is-active > *:not(.eyebrow):not(.pagedot):not(.no-rise) {
   animation: slide-in var(--dur-slide) var(--ease-out) both;
 }
 
@@ -306,28 +306,8 @@ svg [data-step] {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .slide.is-active > *:not(.eyebrow):not(.pagedot):not(.progress):not(.no-rise) { animation: fade-in 200ms ease-out both; }
+  .slide.is-active > *:not(.eyebrow):not(.pagedot):not(.no-rise) { animation: fade-in 200ms ease-out both; }
   .enter { animation-name: fade-in; animation-duration: 200ms; }
   [data-step] { transform: none; transition: opacity 200ms ease-out; }
 }
 
-/* ---------- Progress marker ---------- */
-.progress {
-  position: absolute;
-  top: 5.2%;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 0.45vw;
-}
-
-.progress-item {
-  font: 500 0.95vw "Work Sans", sans-serif;
-  padding: 0.32vw 0.95vw;
-  opacity: 0.32;
-  transition: opacity var(--dur-step) var(--ease-out);
-}
-
-.progress-item.is-current {
-  opacity: 1;
-}
