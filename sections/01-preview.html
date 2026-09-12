@@ -35,7 +35,7 @@
   .task-table th { font: italic 400 1.4vw "Cormorant Garamond", serif; color: var(--ink-soft); text-align: left; padding: 0 1.4vw 0.2vw; font-weight: 400; }
   .task-table th:not(:first-child) { text-align: center; }
   .task-table td { background: var(--card-fill); padding: 0.85vw 1.4vw; font: 400 1.55vw "Work Sans", sans-serif; }
-  .task-table td:first-child { border-radius: 1vw 0 0 1vw; width: 34vw; }
+  .task-table td:first-child { border-radius: 1vw 0 0 1vw; width: 34vw; text-align: left; }
   .task-table td:last-child { border-radius: 0 1vw 1vw 0; }
   .task-table td:not(:first-child) { text-align: center; }
   .who { display: inline-block; min-width: 5.6vw; padding: 0.35vw 1.1vw; border-radius: 999px; font: 500 1.35vw "Work Sans", sans-serif; }
@@ -50,7 +50,7 @@
 
   /* Diagram + gloss side-by-side (slides 6 and 7) */
   .two-col { display: flex; align-items: center; gap: 3vw; width: 90vw; }
-  .two-col svg { width: 40vw; height: auto; flex: none; }
+  .two-col svg { width: 33vw; height: auto; flex: none; }
   .gloss-col { display: flex; flex-direction: column; gap: 1.3vw; flex: 1; text-align: left; }
   .gloss { display: flex; flex-direction: column; gap: 0.5vw; background: var(--card-fill); border-radius: 1.3vw; padding: 1.2vw 1.5vw; }
   .gloss .chip { align-self: flex-start; font-size: 1.45vw; }
@@ -210,7 +210,7 @@
 <section class="slide" data-label="Concept B">
   <div class="eyebrow" style="font-size: 1.5vw;">Module 1 &middot; Preview</div>
   <div class="pagedot"></div>
-  <div class="layout-hero" style="top: 9%; bottom: 12%; gap: 2vw;">
+  <div class="layout-hero" style="top: 12%; bottom: 12%; gap: 2.2vw;">
     <div style="display: flex; flex-direction: column; align-items: center; gap: 0.7vw;">
       <p class="concept-label">Concept B &middot; How it works</p>
       <h1 class="headline" style="font-size: 3vw;">It works in a loop.</h1>
@@ -253,7 +253,7 @@
 <section class="slide" data-label="Concept C">
   <div class="eyebrow" style="font-size: 1.5vw;">Module 1 &middot; Preview</div>
   <div class="pagedot"></div>
-  <div class="layout-hero" style="top: 9%; bottom: 13%; gap: 2vw;">
+  <div class="layout-hero" style="top: 12%; bottom: 13%; gap: 2.2vw;">
     <div style="display: flex; flex-direction: column; align-items: center; gap: 0.7vw;">
       <p class="concept-label">Concept C &middot; What&rsquo;s inside</p>
       <h1 class="headline" style="font-size: 3vw;">An agent has two parts.</h1>
@@ -266,22 +266,19 @@
           </marker>
         </defs>
         <!-- harness ring -->
-        <circle cx="200" cy="200" r="150" fill="#B7C7A8"/>
-        <text x="200" y="76" text-anchor="middle" font-size="24" font-weight="500">Harness</text>
+        <circle cx="200" cy="200" r="138" fill="#B7C7A8"/>
+        <text x="200" y="92" text-anchor="middle" font-size="24" font-weight="500">Harness</text>
         <!-- model core -->
         <circle cx="200" cy="215" r="84" fill="#E1A4C2"/>
         <text x="200" y="210" text-anchor="middle" font-size="26" font-weight="500">Model</text>
         <text x="200" y="238" text-anchor="middle" font-size="15" class="serif" font-style="italic" fill="#5C5345">reads text, writes text</text>
-        <!-- tools outside, connected to the ring -->
-        <rect x="8" y="300" width="88" height="40" rx="20" fill="rgba(255,255,255,0.8)" stroke="rgba(42,36,27,0.25)" stroke-width="1.5"/>
-        <text x="52" y="326" text-anchor="middle" font-size="18" font-weight="500">Files</text>
-        <line x1="90" y1="298" x2="112" y2="282" stroke="#5C5345" stroke-width="2.5"/>
-        <rect x="156" y="352" width="88" height="40" rx="20" fill="rgba(255,255,255,0.8)" stroke="rgba(42,36,27,0.25)" stroke-width="1.5"/>
-        <text x="200" y="378" text-anchor="middle" font-size="18" font-weight="500">Web</text>
-        <line x1="200" y1="352" x2="200" y2="350" stroke="#5C5345" stroke-width="2.5"/>
-        <rect x="304" y="300" width="88" height="40" rx="20" fill="rgba(255,255,255,0.8)" stroke="rgba(42,36,27,0.25)" stroke-width="1.5"/>
-        <text x="348" y="326" text-anchor="middle" font-size="18" font-weight="500">Apps</text>
-        <line x1="310" y1="298" x2="288" y2="282" stroke="#5C5345" stroke-width="2.5"/>
+        <!-- tools sitting on the edge of the harness ring -->
+        <rect x="43" y="259" width="88" height="40" rx="20" fill="rgba(255,255,255,0.9)" stroke="rgba(42,36,27,0.3)" stroke-width="1.5"/>
+        <text x="87" y="285" text-anchor="middle" font-size="18" font-weight="500">Files</text>
+        <rect x="156" y="318" width="88" height="40" rx="20" fill="rgba(255,255,255,0.9)" stroke="rgba(42,36,27,0.3)" stroke-width="1.5"/>
+        <text x="200" y="344" text-anchor="middle" font-size="18" font-weight="500">Web</text>
+        <rect x="269" y="259" width="88" height="40" rx="20" fill="rgba(255,255,255,0.9)" stroke="rgba(42,36,27,0.3)" stroke-width="1.5"/>
+        <text x="313" y="285" text-anchor="middle" font-size="18" font-weight="500">Apps</text>
       </svg>
       <div class="gloss-col">
         <div class="gloss"><span class="chip card--pink">Model</span><p>The part that thinks. It reads text and writes text. That is all it can do.</p></div>
