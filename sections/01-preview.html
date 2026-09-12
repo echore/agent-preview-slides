@@ -4,6 +4,12 @@
   .pv-ref a { color: inherit; }
   .pv-foot { position: absolute; left: 4.2%; right: 4.2%; bottom: 5%; margin: 0; text-align: center; font: 500 1.9vw "Cormorant Garamond", serif; color: var(--ink); }
 
+  /* Title ornament (slide 1) */
+  .title-dots { display: flex; gap: 0.9vw; }
+  .title-dots i { display: block; width: 1.1vw; height: 1.1vw; border-radius: 50%; }
+  .title-chips { display: flex; gap: 1vw; margin-top: 0.6vw; }
+  .title-chips .chip { font: 500 1.35vw "Work Sans", sans-serif; padding: 0.55vw 1.5vw; }
+
   /* Roadmap row (used on slide 2 and slide 8) */
   .rm-row { display: flex; align-items: flex-start; justify-content: center; gap: 1vw; width: 92vw; }
   .rm-step { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 0.9vw; text-align: center; }
@@ -75,8 +81,16 @@
 <section class="slide" data-label="Title">
   <div class="eyebrow" style="font-size: 1.5vw;">Module 1 &middot; Preview</div>
   <div class="pagedot"></div>
-  <div class="layout-hero" style="top: 11%; bottom: 11%; gap: 1.4vw;">
-    <h1 class="headline" style="font-size: 6.5vw;">What Is an Agent</h1>
+  <div class="layout-hero" style="top: 11%; bottom: 11%; gap: 2.2vw;">
+    <p class="kicker" style="font-size: 1.9vw;">Module 1</p>
+    <h1 class="headline" style="font-size: 7vw;">What Is an Agent</h1>
+    <div class="title-dots"><i style="background: var(--pink);"></i><i style="background: var(--blush);"></i><i style="background: var(--sage);"></i></div>
+    <div class="title-chips">
+      <span class="chip card--pink">Why</span>
+      <span class="chip card--blush">What</span>
+      <span class="chip card--sage">How</span>
+      <span class="chip card--lilac">Inside</span>
+    </div>
   </div>
 </section>
 
@@ -84,7 +98,7 @@
 <section class="slide" data-label="Roadmap">
   <div class="eyebrow" style="font-size: 1.5vw;">Module 1 &middot; Preview</div>
   <div class="pagedot"></div>
-  <div class="layout-hero" style="gap: 3vw;">
+  <div class="layout-hero" style="top: 14%; bottom: 24%; gap: 4vw;">
     <h1 class="headline" style="font-size: 3.4vw;">Roadmap</h1>
     <div class="rm-row">
       <div class="rm-step"><span class="chip card--pink rm-tag">WHY</span><p class="rm-title">Why this matters to&nbsp;you</p></div>
@@ -105,7 +119,7 @@
   <div class="eyebrow" style="font-size: 1.5vw;">Module 1 &middot; Preview</div>
   <div class="pagedot"></div>
   <div class="layout-hero" style="top: 8%; bottom: 12%; gap: 2.6vw;">
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 1vw;">
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 1.5vw;">
       <h1 class="headline" style="font-size: 3.4vw;">Why this matters to you</h1>
       <p class="body" style="font-size: 1.65vw; color: var(--ink-soft); max-width: 72vw;">A basic chatbot mainly answers. An agent can take actions to complete a task.</p>
     </div>
@@ -136,7 +150,7 @@
   <div class="eyebrow" style="font-size: 1.5vw;">Module 1 &middot; Preview</div>
   <div class="pagedot"></div>
   <div class="layout-hero" style="top: 9%; bottom: 13%; gap: 1.8vw;">
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 0.6vw;">
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 1.3vw;">
       <h1 class="headline" style="font-size: 3.2vw;">Same task, two experiences</h1>
       <p class="kicker" style="font-size: 1.8vw; max-width: 80vw;">&ldquo;Every Monday, turn last week&rsquo;s sales numbers into the team report.&rdquo;</p>
     </div>
@@ -160,7 +174,7 @@
   <div class="eyebrow" style="font-size: 1.5vw;">Module 1 &middot; Preview</div>
   <div class="pagedot"></div>
   <div class="layout-hero" style="top: 9%; bottom: 12%; gap: 2vw;">
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 0.7vw;">
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 1.4vw;">
       <p class="concept-label">Concept A &middot; What is an agent</p>
       <h1 class="headline" style="font-size: 2.6vw; max-width: 80vw;">An agent is an AI that can take actions on its own to finish a task.</h1>
     </div>
@@ -217,7 +231,7 @@
   <div class="eyebrow" style="font-size: 1.5vw;">Module 1 &middot; Preview</div>
   <div class="pagedot"></div>
   <div class="layout-hero" style="top: 12%; bottom: 12%; gap: 2.2vw;">
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 0.7vw;">
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 1.4vw;">
       <p class="concept-label">Concept B &middot; How it works</p>
       <h1 class="headline" style="font-size: 3vw;">It works in a loop.</h1>
     </div>
@@ -260,7 +274,7 @@
   <div class="eyebrow" style="font-size: 1.5vw;">Module 1 &middot; Preview</div>
   <div class="pagedot"></div>
   <div class="layout-hero" style="top: 12%; bottom: 13%; gap: 2.2vw;">
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 0.7vw;">
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 1.4vw;">
       <p class="concept-label">Concept C &middot; What&rsquo;s inside</p>
       <h1 class="headline" style="font-size: 3vw;">Think of an agent as three parts.</h1>
     </div>
@@ -296,7 +310,7 @@
 <section class="slide" data-label="Takeaway">
   <div class="eyebrow" style="font-size: 1.5vw;">Module 1 &middot; Preview</div>
   <div class="pagedot"></div>
-  <div class="layout-hero" style="top: 12%; bottom: 14%; gap: 3vw;">
+  <div class="layout-hero" style="top: 12%; bottom: 26%; gap: 4vw;">
     <h1 class="headline" style="font-size: 3.4vw;">Takeaway</h1>
     <div class="rm-row">
       <div class="rm-step"><span class="rm-check">&#10003;</span><span class="chip card--pink rm-tag">WHY</span><p class="rm-line">Basic chatbots mainly answer. Agents can take actions.</p></div>
