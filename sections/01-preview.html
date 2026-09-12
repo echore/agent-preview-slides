@@ -10,10 +10,6 @@
   .title-chips { display: flex; gap: 1vw; margin-top: 0.6vw; }
   .title-chips .chip { font: 500 1.35vw "Work Sans", sans-serif; padding: 0.55vw 1.5vw; }
 
-  /* Fixed two-band composition: title in the upper fifth, body centred on the page (slides 2 and 8) */
-  .band-title { position: absolute; top: 20%; left: 4.2%; right: 4.2%; text-align: center; }
-  .band-body { position: absolute; top: 54%; left: 4.2%; right: 4.2%; transform: translateY(-50%); display: flex; justify-content: center; }
-
   /* Roadmap row (used on slide 2 and slide 8) */
   .rm-row { display: flex; align-items: flex-start; justify-content: center; gap: 1.2vw; width: 92vw; }
   .rm-step { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 1.1vw; text-align: center; }
@@ -105,27 +101,27 @@
 <section class="slide" data-label="Roadmap">
   <div class="eyebrow" style="font-size: 1.5vw;">Module 1 &middot; Preview</div>
   <div class="pagedot"></div>
-  <div class="band-title"><h1 class="headline" style="font-size: 3.6vw;">Roadmap</h1></div>
-  <div class="band-body no-rise">
+  <div class="layout-hero no-rise" style="top: 12%; bottom: 18%; gap: 3.4vw;">
+    <h1 class="headline enter" style="--i: 0; font-size: 3.6vw;">Roadmap</h1>
     <div class="rm-row">
-      <div class="rm-step enter" style="--i: 0;"><span class="chip card--pink rm-tag">WHY</span><p class="rm-title">Why&nbsp;this&nbsp;matters to&nbsp;you</p></div>
-      <span class="rm-arrow enter" style="--i: 1;">&rarr;</span>
-      <div class="rm-step enter" style="--i: 1;"><span class="chip card--blush rm-tag">Concept A</span><p class="rm-title">What is an&nbsp;agent</p></div>
+      <div class="rm-step enter" style="--i: 1;"><span class="chip card--pink rm-tag">WHY</span><p class="rm-title">Why&nbsp;this&nbsp;matters to&nbsp;you</p></div>
       <span class="rm-arrow enter" style="--i: 2;">&rarr;</span>
-      <div class="rm-step enter" style="--i: 2;"><span class="chip card--sage rm-tag">Concept B</span><p class="rm-title">How it works</p></div>
+      <div class="rm-step enter" style="--i: 2;"><span class="chip card--blush rm-tag">Concept A</span><p class="rm-title">What is an&nbsp;agent</p></div>
       <span class="rm-arrow enter" style="--i: 3;">&rarr;</span>
-      <div class="rm-step enter" style="--i: 3;"><span class="chip card--lilac rm-tag">Concept C</span><p class="rm-title">What&rsquo;s inside</p></div>
+      <div class="rm-step enter" style="--i: 3;"><span class="chip card--sage rm-tag">Concept B</span><p class="rm-title">How it works</p></div>
       <span class="rm-arrow enter" style="--i: 4;">&rarr;</span>
-      <div class="rm-step enter" style="--i: 4;"><span class="chip chip--blank rm-tag">Takeaway</span><p class="rm-title">Recap</p></div>
+      <div class="rm-step enter" style="--i: 4;"><span class="chip card--lilac rm-tag">Concept C</span><p class="rm-title">What&rsquo;s inside</p></div>
+      <span class="rm-arrow enter" style="--i: 5;">&rarr;</span>
+      <div class="rm-step enter" style="--i: 5;"><span class="chip chip--blank rm-tag">Takeaway</span><p class="rm-title">Recap</p></div>
     </div>
   </div>
 </section>
 
 <!-- 3 · WHY -->
-<section class="slide" data-label="Why">
+<section class="slide" data-label="Why" data-progress="why">
   <div class="eyebrow" style="font-size: 1.5vw;">Module 1 &middot; Preview</div>
   <div class="pagedot"></div>
-  <div class="layout-hero" style="top: 8%; bottom: 12%; gap: 2.6vw;">
+  <div class="layout-hero" style="top: 10%; bottom: 12%; gap: 2.6vw;">
     <div style="display: flex; flex-direction: column; align-items: center; gap: 1.5vw;">
       <h1 class="headline" style="font-size: 3.4vw;">Why this matters to you</h1>
       <p class="body" style="font-size: 1.65vw; color: var(--ink-soft); max-width: 72vw;">A basic chatbot mainly answers. An agent can take actions to complete a task.</p>
@@ -153,7 +149,7 @@
 </section>
 
 <!-- 4 · WHY example -->
-<section class="slide" data-label="Why example">
+<section class="slide" data-label="Why example" data-progress="why">
   <div class="eyebrow" style="font-size: 1.5vw;">Module 1 &middot; Preview</div>
   <div class="pagedot"></div>
   <div class="layout-hero" style="top: 9%; bottom: 13%; gap: 1.8vw;">
@@ -177,10 +173,10 @@
 </section>
 
 <!-- 5 · Concept A -->
-<section class="slide" data-label="Concept A">
+<section class="slide" data-label="Concept A" data-progress="a">
   <div class="eyebrow" style="font-size: 1.5vw;">Module 1 &middot; Preview</div>
   <div class="pagedot"></div>
-  <div class="layout-hero" style="top: 9%; bottom: 12%; gap: 2vw;">
+  <div class="layout-hero" style="top: 10%; bottom: 12%; gap: 2vw;">
     <div style="display: flex; flex-direction: column; align-items: center; gap: 1.4vw;">
       <p class="concept-label">Concept A &middot; What is an agent</p>
       <h1 class="headline" style="font-size: 2.6vw; max-width: 80vw;">An agent is an AI that can take actions on its own to finish a task.</h1>
@@ -234,7 +230,7 @@
 </section>
 
 <!-- 6 · Concept B -->
-<section class="slide" data-label="Concept B">
+<section class="slide" data-label="Concept B" data-progress="b">
   <div class="eyebrow" style="font-size: 1.5vw;">Module 1 &middot; Preview</div>
   <div class="pagedot"></div>
   <div class="layout-hero" style="top: 12%; bottom: 12%; gap: 2.2vw;">
@@ -283,7 +279,7 @@
 </section>
 
 <!-- 7 · Concept C -->
-<section class="slide" data-label="Concept C">
+<section class="slide" data-label="Concept C" data-progress="c">
   <div class="eyebrow" style="font-size: 1.5vw;">Module 1 &middot; Preview</div>
   <div class="pagedot"></div>
   <div class="layout-hero" style="top: 12%; bottom: 13%; gap: 2.2vw;">
@@ -292,23 +288,36 @@
       <h1 class="headline" style="font-size: 3vw;">Think of an agent as three parts.</h1>
     </div>
     <div class="two-col">
-      <div class="agent-system agent-part" role="img" aria-label="Model and tools connected by an agent loop" data-step="3">
-        <div class="agent-loop-label" data-step="3" style="--d: 120ms;">
-          <strong>Agent loop</strong>
-          <span>context &middot; results &middot; repeat or stop</span>
-        </div>
-        <div class="agent-core">
-          <div class="agent-core-card agent-part card--pink" data-step="1">
-            <strong>Model</strong>
-            <span>chooses the next step</span>
-          </div>
-          <span class="agent-core-arrow" data-step="2">&harr;</span>
-          <div class="agent-core-card agent-part card--blush" data-step="2" style="--d: 60ms;">
-            <strong>Tools</strong>
-            <span>get information and act</span>
-          </div>
-        </div>
-      </div>
+      <svg viewBox="0 0 400 400" role="img" aria-label="Model and tools inside an agent loop: the model picks the next step, a tool runs it, the result comes back, and the loop repeats or stops">
+        <defs>
+          <marker id="arrowC" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+            <path d="M0 0 L10 5 L0 10 z" fill="#5C5345"/>
+          </marker>
+        </defs>
+        <!-- the loop: a dashed ring around both parts -->
+        <g class="agent-part" data-step="3">
+          <circle cx="200" cy="205" r="150" fill="none" stroke="#5C5345" stroke-width="2.5" stroke-dasharray="8 7"/>
+          <text x="200" y="88" text-anchor="middle" font-size="24" font-weight="500">Agent loop</text>
+          <text x="200" y="110" text-anchor="middle" font-size="14" class="serif" font-style="italic" fill="#5C5345">context &middot; results &middot; repeat or stop</text>
+          <!-- result flows back: Tools -> Model -->
+          <path d="M 236 282 Q 200 318 164 282" fill="none" stroke="#5C5345" stroke-width="3" marker-end="url(#arrowC)"/>
+          <text x="200" y="336" text-anchor="middle" font-size="17" class="serif" font-style="italic" fill="#5C5345">result</text>
+        </g>
+        <!-- the model -->
+        <g class="agent-part" data-step="1">
+          <circle cx="112" cy="228" r="60" fill="#E1A4C2"/>
+          <text x="112" y="224" text-anchor="middle" font-size="24" font-weight="500">Model</text>
+          <text x="112" y="246" text-anchor="middle" font-size="13.5" class="serif" font-style="italic" fill="#5C5345">chooses the next step</text>
+        </g>
+        <!-- the tools, and the step that goes to them -->
+        <g class="agent-part" data-step="2">
+          <circle cx="288" cy="228" r="60" fill="#E8C9B6"/>
+          <text x="288" y="224" text-anchor="middle" font-size="24" font-weight="500">Tools</text>
+          <text x="288" y="246" text-anchor="middle" font-size="13.5" class="serif" font-style="italic" fill="#5C5345">get information and act</text>
+          <path d="M 164 174 Q 200 138 236 174" fill="none" stroke="#5C5345" stroke-width="3" marker-end="url(#arrowC)"/>
+          <text x="200" y="136" text-anchor="middle" font-size="17" class="serif" font-style="italic" fill="#5C5345">next step</text>
+        </g>
+      </svg>
       <div class="gloss-col">
         <div class="gloss" data-step="1"><span class="chip card--pink">Model</span><p>Understands the situation and chooses the next step.</p></div>
         <div class="gloss" data-step="2"><span class="chip card--blush">Tools</span><p>Let it get information and take action.</p></div>
@@ -320,11 +329,11 @@
 </section>
 
 <!-- 8 · Takeaway -->
-<section class="slide" data-label="Takeaway">
+<section class="slide" data-label="Takeaway" data-progress="takeaway">
   <div class="eyebrow" style="font-size: 1.5vw;">Module 1 &middot; Preview</div>
   <div class="pagedot"></div>
-  <div class="band-title"><h1 class="headline" style="font-size: 3.6vw;">Takeaway</h1></div>
-  <div class="band-body" style="top: 56%;">
+  <div class="layout-hero" style="top: 12%; bottom: 18%; gap: 3.4vw;">
+    <h1 class="headline" style="font-size: 3.6vw;">Takeaway</h1>
     <div class="rm-row">
       <div class="rm-step" data-step="1"><span class="rm-check">&#10003;</span><span class="chip card--pink rm-tag">WHY</span><p class="rm-line">Basic chatbots mainly answer. Agents can take actions.</p></div>
       <div class="rm-step" data-step="2"><span class="rm-check">&#10003;</span><span class="chip card--blush rm-tag">Concept A</span><p class="rm-line">An AI that takes actions on its own to finish a task.</p></div>
