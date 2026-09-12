@@ -17,10 +17,9 @@
   .flow-wrap { display: flex; flex-direction: column; gap: 2vw; width: 90vw; }
   .flow-row { display: flex; align-items: center; gap: 1vw; }
   .flow-name { width: 11vw; flex: none; font: 500 2.4vw "Cormorant Garamond", serif; text-align: right; padding-right: 1vw; }
-  .flow-box { flex: 1; display: flex; flex-direction: column; gap: 0.5vw; border-radius: 1.3vw; padding: 1.2vw 1.4vw; min-height: 7.4vw; justify-content: center; }
+  .flow-box { flex: 1 1 0; width: 0; display: flex; flex-direction: column; gap: 0.5vw; border-radius: 1.3vw; padding: 1.2vw 1.4vw; height: 7.8vw; justify-content: center; }
   .flow-box--you { background: rgba(255, 255, 255, 0.7); border: 1.5px dashed var(--rule-soft); }
-  .flow-box--ai { background: var(--lemon); }
-  .flow-box--wide { flex: 1.7; }
+  .flow-box--ai { background: var(--sage); }
   .flow-who { font: 500 1.05vw "Work Sans", sans-serif; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-soft); }
   .flow-text { margin: 0; font: 500 1.6vw/1.25 "Work Sans", sans-serif; }
   .flow-arrow { font: 400 2.2vw "Cormorant Garamond", serif; color: var(--ink-soft); flex: none; }
@@ -28,7 +27,7 @@
   .legend span { display: inline-flex; align-items: center; gap: 0.5vw; }
   .legend i { display: inline-block; width: 1.5vw; height: 1.5vw; border-radius: 0.4vw; }
   .legend i.you { background: rgba(255, 255, 255, 0.7); border: 1.5px dashed var(--rule-soft); }
-  .legend i.ai { background: var(--lemon); }
+  .legend i.ai { background: var(--sage); }
 
   /* Same-task table (slide 4) */
   .task-table { border-collapse: separate; border-spacing: 0 0.6vw; width: 74vw; }
@@ -40,7 +39,7 @@
   .task-table td:not(:first-child) { text-align: center; }
   .who { display: inline-block; min-width: 5.6vw; padding: 0.35vw 1.1vw; border-radius: 999px; font: 500 1.35vw "Work Sans", sans-serif; }
   .who--you { background: rgba(255, 255, 255, 0.85); border: 1.5px dashed var(--rule-soft); }
-  .who--ai { background: var(--lemon); }
+  .who--ai { background: var(--sage); }
 
   /* Concept A pieces */
   .ag-piece-row { display: flex; gap: 1.6vw; width: 88vw; justify-content: center; }
@@ -66,9 +65,7 @@
   <div class="eyebrow" style="font-size: 1.5vw;">Module 1 &middot; Preview</div>
   <div class="pagedot"></div>
   <div class="layout-hero" style="top: 11%; bottom: 11%; gap: 1.4vw;">
-    <p class="kicker" style="font-size: 2vw;">Yachen Li</p>
     <h1 class="headline" style="font-size: 6.5vw;">What Is an Agent</h1>
-    <p class="subhead" style="color: var(--ink-soft);">One idea, before our first class.</p>
   </div>
 </section>
 
@@ -77,17 +74,17 @@
   <div class="eyebrow" style="font-size: 1.5vw;">Module 1 &middot; Preview</div>
   <div class="pagedot"></div>
   <div class="layout-hero" style="gap: 3vw;">
-    <h1 class="headline" style="font-size: 3.4vw;">The next six minutes</h1>
+    <h1 class="headline" style="font-size: 3.4vw;">Roadmap</h1>
     <div class="rm-row">
       <div class="rm-step"><span class="chip card--pink rm-tag">WHY</span><p class="rm-title">Why this matters to&nbsp;you</p></div>
       <span class="rm-arrow">&rarr;</span>
-      <div class="rm-step"><span class="chip card--lemon rm-tag">Concept A</span><p class="rm-title">What is an agent</p></div>
+      <div class="rm-step"><span class="chip card--blush rm-tag">Concept A</span><p class="rm-title">What is an agent</p></div>
       <span class="rm-arrow">&rarr;</span>
-      <div class="rm-step"><span class="chip card--blush rm-tag">Concept B</span><p class="rm-title">How it works</p></div>
+      <div class="rm-step"><span class="chip card--sage rm-tag">Concept B</span><p class="rm-title">How it works</p></div>
       <span class="rm-arrow">&rarr;</span>
-      <div class="rm-step"><span class="chip card--sage rm-tag">Concept C</span><p class="rm-title">What&rsquo;s inside</p></div>
+      <div class="rm-step"><span class="chip card--lilac rm-tag">Concept C</span><p class="rm-title">What&rsquo;s inside</p></div>
       <span class="rm-arrow">&rarr;</span>
-      <div class="rm-step"><span class="chip card--lilac rm-tag">Takeaway</span><p class="rm-title">Recap</p></div>
+      <div class="rm-step"><span class="chip chip--blank rm-tag">Takeaway</span><p class="rm-title">Recap</p></div>
     </div>
   </div>
 </section>
@@ -96,10 +93,10 @@
 <section class="slide" data-label="Why">
   <div class="eyebrow" style="font-size: 1.5vw;">Module 1 &middot; Preview</div>
   <div class="pagedot"></div>
-  <div class="layout-hero" style="top: 9%; bottom: 13%; gap: 2.2vw;">
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 0.6vw;">
-      <p class="concept-label">Why this matters to you</p>
-      <h1 class="headline" style="font-size: 3.2vw;">Answers vs. results</h1>
+  <div class="layout-hero" style="top: 8%; bottom: 12%; gap: 2.6vw;">
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 1vw;">
+      <h1 class="headline" style="font-size: 3.4vw;">Why this matters to you</h1>
+      <p class="body" style="font-size: 1.65vw; color: var(--ink-soft); max-width: 72vw;">A chatbot answers your question and tells you how to do the work. An agent does the work for you.</p>
     </div>
     <div class="flow-wrap">
       <div class="flow-row">
@@ -108,20 +105,19 @@
         <span class="flow-arrow">&rarr;</span>
         <div class="flow-box flow-box--ai"><span class="flow-who">AI</span><p class="flow-text">It answers</p></div>
         <span class="flow-arrow">&rarr;</span>
-        <div class="flow-box flow-box--you flow-box--wide"><span class="flow-who">You</span><p class="flow-text">You do the work</p></div>
+        <div class="flow-box flow-box--you"><span class="flow-who">You</span><p class="flow-text">You do the work</p></div>
       </div>
       <div class="flow-row">
         <div class="flow-name">Agent</div>
         <div class="flow-box flow-box--you"><span class="flow-who">You</span><p class="flow-text">You hand over the task</p></div>
         <span class="flow-arrow">&rarr;</span>
-        <div class="flow-box flow-box--ai flow-box--wide"><span class="flow-who">AI</span><p class="flow-text">It does the steps</p></div>
+        <div class="flow-box flow-box--ai"><span class="flow-who">AI</span><p class="flow-text">It does the steps</p></div>
         <span class="flow-arrow">&rarr;</span>
         <div class="flow-box flow-box--you"><span class="flow-who">You</span><p class="flow-text">You check the result</p></div>
       </div>
     </div>
     <div class="legend"><span><i class="you"></i> You</span><span><i class="ai"></i> AI</span></div>
   </div>
-  <p class="pv-foot">Every tool in this course is an agent.</p>
 </section>
 
 <!-- 4 · WHY example -->
@@ -130,8 +126,8 @@
   <div class="pagedot"></div>
   <div class="layout-hero" style="top: 9%; bottom: 13%; gap: 1.8vw;">
     <div style="display: flex; flex-direction: column; align-items: center; gap: 0.6vw;">
-      <p class="concept-label">Same task, two experiences</p>
-      <h1 class="headline" style="font-size: 2.3vw; max-width: 80vw;">&ldquo;Every Monday, turn last week&rsquo;s sales numbers into the team report.&rdquo;</h1>
+      <h1 class="headline" style="font-size: 3.2vw;">Same task, two experiences</h1>
+      <p class="kicker" style="font-size: 1.8vw; max-width: 80vw;">&ldquo;Every Monday, turn last week&rsquo;s sales numbers into the team report.&rdquo;</p>
     </div>
     <table class="task-table">
       <thead>
@@ -146,7 +142,6 @@
       </tbody>
     </table>
   </div>
-  <p class="pv-ref">Also works for: job applications &middot; expense reports &middot; calendar cleanup</p>
 </section>
 
 <!-- 5 · Concept A -->
@@ -169,15 +164,15 @@
       <text x="85" y="170" text-anchor="middle" font-size="26" font-weight="500">Goal</text>
       <line x1="165" y1="162" x2="205" y2="162" stroke="#5C5345" stroke-width="2.5" marker-end="url(#arrowA)"/>
       <!-- Actions -->
-      <rect x="215" y="126" width="165" height="72" rx="16" fill="#D6DD63"/>
+      <rect x="215" y="126" width="165" height="72" rx="16" fill="#E8C9B6"/>
       <text x="297" y="156" text-anchor="middle" font-size="16" fill="#5C5345">TOOL</text>
       <text x="297" y="182" text-anchor="middle" font-size="22" font-weight="500">open a file</text>
       <line x1="385" y1="162" x2="415" y2="162" stroke="#5C5345" stroke-width="2.5" marker-end="url(#arrowA)"/>
-      <rect x="425" y="126" width="165" height="72" rx="16" fill="#D6DD63"/>
+      <rect x="425" y="126" width="165" height="72" rx="16" fill="#E8C9B6"/>
       <text x="507" y="156" text-anchor="middle" font-size="16" fill="#5C5345">TOOL</text>
       <text x="507" y="182" text-anchor="middle" font-size="22" font-weight="500">search</text>
       <line x1="595" y1="162" x2="625" y2="162" stroke="#5C5345" stroke-width="2.5" marker-end="url(#arrowA)"/>
-      <rect x="635" y="126" width="165" height="72" rx="16" fill="#D6DD63"/>
+      <rect x="635" y="126" width="165" height="72" rx="16" fill="#E8C9B6"/>
       <text x="717" y="156" text-anchor="middle" font-size="16" fill="#5C5345">TOOL</text>
       <text x="717" y="182" text-anchor="middle" font-size="22" font-weight="500">write</text>
       <line x1="805" y1="162" x2="835" y2="162" stroke="#5C5345" stroke-width="2.5" marker-end="url(#arrowA)"/>
@@ -194,7 +189,7 @@
         <p class="ag-gloss">You describe what &ldquo;done&rdquo; looks like. Not the steps.</p>
       </div>
       <div class="ag-piece">
-        <span class="chip card--lemon">Tools</span>
+        <span class="chip card--blush">Tools</span>
         <p class="ag-gloss">It can open files, search, write, and run things.</p>
       </div>
       <div class="ag-piece">
@@ -230,7 +225,7 @@
         <circle cx="200" cy="70" r="54" fill="#E1A4C2"/>
         <text x="200" y="64" text-anchor="middle" font-size="13" fill="#5C5345">1</text>
         <text x="200" y="86" text-anchor="middle" font-size="24" font-weight="500">Reason</text>
-        <circle cx="312" cy="265" r="54" fill="#D6DD63"/>
+        <circle cx="312" cy="265" r="54" fill="#E8C9B6"/>
         <text x="312" y="259" text-anchor="middle" font-size="13" fill="#5C5345">2</text>
         <text x="312" y="281" text-anchor="middle" font-size="24" font-weight="500">Act</text>
         <circle cx="88" cy="265" r="54" fill="#B7C7A8"/>
@@ -240,7 +235,7 @@
       </svg>
       <div class="gloss-col">
         <div class="gloss"><span class="chip card--pink">Reason</span><p>Given what I know so far, what is the best next step?</p></div>
-        <div class="gloss"><span class="chip card--lemon">Act</span><p>Do that one step, usually with a tool.</p></div>
+        <div class="gloss"><span class="chip card--blush">Act</span><p>Do that one step, usually with a tool.</p></div>
         <div class="gloss"><span class="chip card--sage">Observe</span><p>What came back? Did it work? Anything unexpected?</p></div>
         <p class="gloss-note">It stops when the goal is met, or when it needs to ask you something.</p>
       </div>
@@ -297,10 +292,9 @@
     <h1 class="headline" style="font-size: 3.4vw;">Takeaway</h1>
     <div class="rm-row">
       <div class="rm-step"><span class="rm-check">&#10003;</span><span class="chip card--pink rm-tag">WHY</span><p class="rm-line">Chatbots give answers. Agents give results.</p></div>
-      <div class="rm-step"><span class="rm-check">&#10003;</span><span class="chip card--lemon rm-tag">Concept A</span><p class="rm-line">An AI that takes actions on its own to finish a task.</p></div>
-      <div class="rm-step"><span class="rm-check">&#10003;</span><span class="chip card--blush rm-tag">Concept B</span><p class="rm-line">Reason, act, observe. Repeat until done.</p></div>
-      <div class="rm-step"><span class="rm-check">&#10003;</span><span class="chip card--sage rm-tag">Concept C</span><p class="rm-line">The model thinks. The harness does.</p></div>
+      <div class="rm-step"><span class="rm-check">&#10003;</span><span class="chip card--blush rm-tag">Concept A</span><p class="rm-line">An AI that takes actions on its own to finish a task.</p></div>
+      <div class="rm-step"><span class="rm-check">&#10003;</span><span class="chip card--sage rm-tag">Concept B</span><p class="rm-line">Reason, act, observe. Repeat until done.</p></div>
+      <div class="rm-step"><span class="rm-check">&#10003;</span><span class="chip card--lilac rm-tag">Concept C</span><p class="rm-line">The model thinks. The harness does.</p></div>
     </div>
   </div>
-  <p class="pv-foot">Next class: we run one for real.</p>
 </section>
