@@ -181,7 +181,7 @@
       <p class="concept-label">Concept A &middot; What is an agent</p>
       <h1 class="headline" style="font-size: 2.6vw; max-width: 80vw;">An agent is an AI that can take actions on its own to finish a task.</h1>
     </div>
-    <svg viewBox="0 0 1000 250" style="width: 86vw; height: auto;" role="img" aria-label="Goal, then a loop of actions with tools, then a result" data-step="1">
+    <svg viewBox="0 0 1000 250" style="width: 86vw; height: auto;" role="img" aria-label="Goal, then decide, act with a tool, observe the result, and either continue the loop or finish" data-step="1">
       <defs>
         <marker id="arrowA" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
           <path d="M0 0 L10 5 L0 10 z" fill="#5C5345"/>
@@ -191,25 +191,26 @@
       <rect x="10" y="130" width="150" height="64" rx="32" fill="#E1A4C2"/>
       <text x="85" y="170" text-anchor="middle" font-size="26" font-weight="500">Goal</text>
       <line x1="165" y1="162" x2="205" y2="162" stroke="#5C5345" stroke-width="2.5" marker-end="url(#arrowA)"/>
-      <!-- Actions -->
-      <rect x="215" y="126" width="165" height="72" rx="16" fill="#E8C9B6"/>
-      <text x="297" y="156" text-anchor="middle" font-size="16" fill="#5C5345">TOOL</text>
-      <text x="297" y="182" text-anchor="middle" font-size="22" font-weight="500">open a file</text>
+      <!-- Agent loop -->
+      <rect x="215" y="126" width="165" height="72" rx="16" fill="#E9C3D5"/>
+      <text x="297" y="156" text-anchor="middle" font-size="16" fill="#5C5345">DECIDE</text>
+      <text x="297" y="182" text-anchor="middle" font-size="22" font-weight="500">next step</text>
       <line x1="385" y1="162" x2="415" y2="162" stroke="#5C5345" stroke-width="2.5" marker-end="url(#arrowA)"/>
       <rect x="425" y="126" width="165" height="72" rx="16" fill="#E8C9B6"/>
-      <text x="507" y="156" text-anchor="middle" font-size="16" fill="#5C5345">TOOL</text>
-      <text x="507" y="182" text-anchor="middle" font-size="22" font-weight="500">search</text>
+      <text x="507" y="156" text-anchor="middle" font-size="16" fill="#5C5345">ACT</text>
+      <text x="507" y="182" text-anchor="middle" font-size="22" font-weight="500">use a tool</text>
       <line x1="595" y1="162" x2="625" y2="162" stroke="#5C5345" stroke-width="2.5" marker-end="url(#arrowA)"/>
-      <rect x="635" y="126" width="165" height="72" rx="16" fill="#E8C9B6"/>
-      <text x="717" y="156" text-anchor="middle" font-size="16" fill="#5C5345">TOOL</text>
-      <text x="717" y="182" text-anchor="middle" font-size="22" font-weight="500">write</text>
+      <rect x="635" y="126" width="165" height="72" rx="16" fill="#CBD6C2"/>
+      <text x="717" y="156" text-anchor="middle" font-size="16" fill="#5C5345">OBSERVE</text>
+      <text x="717" y="182" text-anchor="middle" font-size="22" font-weight="500">check result</text>
       <line x1="805" y1="162" x2="835" y2="162" stroke="#5C5345" stroke-width="2.5" marker-end="url(#arrowA)"/>
+      <text x="820" y="147" text-anchor="middle" font-size="14" class="serif" font-style="italic" fill="#5C5345">done</text>
       <!-- Result -->
       <rect x="840" y="130" width="150" height="64" rx="32" fill="#B7C7A8"/>
       <text x="915" y="170" text-anchor="middle" font-size="26" font-weight="500">Result</text>
-      <!-- Loop arc over the actions -->
-      <path d="M 760 120 C 760 40, 255 40, 255 120" fill="none" stroke="#5C5345" stroke-width="2.5" stroke-dasharray="7 6" marker-end="url(#arrowA)"/>
-      <text x="507" y="52" text-anchor="middle" font-size="20" class="serif" font-style="italic" fill="#5C5345">after each step: check the result, decide the next one</text>
+      <!-- If the task is not done, the observation informs the next decision. -->
+      <path d="M 717 120 C 717 40, 297 40, 297 120" fill="none" stroke="#5C5345" stroke-width="2.5" stroke-dasharray="7 6" marker-end="url(#arrowA)"/>
+      <text x="507" y="52" text-anchor="middle" font-size="20" class="serif" font-style="italic" fill="#5C5345">not done: choose the next step</text>
     </svg>
     <div class="ag-piece-row">
       <div class="ag-piece" data-step="2">
