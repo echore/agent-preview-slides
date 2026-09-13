@@ -16,7 +16,6 @@ const requiredCopy = [
   'Let it get information and take action.',
   'Keeps context, returns results, and repeats or stops.',
   'The model decides. Tools act. The loop connects them.',
-  'Basic chatbots mainly answer. Agents can take actions.',
   'Reason, act, observe. Repeat as needed.',
   'Model, tools, and loop work together.',
 ];
